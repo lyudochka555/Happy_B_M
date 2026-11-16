@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>🎉 Happy Birthday 🎉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Яркий фон -->
+<div class="bg-magic" id="bgPetals"></div>
+<div class="ambient-light light-1"></div>
+<div class="ambient-light light-2"></div>
+<div class="ambient-light light-3"></div>
+
+<!-- Конфетти -->
+<canvas id="confetti-canvas"></canvas>
+
+<div class="wrap">
+
+  <!-- Обложка (Hero) -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="fancy-title">Happy Birthday</h1>
+      <p class="hero-date">16 НОЯБРЯ · 2026</p>
+    </div>
+    <div class="scroll-down">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+  </header>
+
+  <!-- Секция 1: Поздравление -->
+  <section class="card reveal glass">
+    <div class="decor-stars">✦ ✧ ✦</div>
+    <h2 class="section-title">С днём рождения, <br><span class="name" id="nameTrigger">Маша</span></h2>
+        <div class="photo-frame">
+      <img src="img/masha.jpg" alt="Маша" style="width: 100%; display: block; border-radius: 4px;">
+    </div>
+    <p class="text-content">
+      Пусть этот год принесёт море крутых моментов, ярких эмоций и исполнения желаний. 
+      Желаю тебе счастья, вдохновения и успехов в каждом деле! 💖
+    </p>
+  </section>
+
+  <!-- Секция 2: Настроение -->
+  <section class="card reveal glass center">
+    <h2 class="section-title">Какое у тебя настроение?</h2>
+    <p class="text-small mb-20">Выбери эмоцию — и сайт подстроится!</p>
+        <div class="mood-selector">
+      <button class="mood-btn" data-mood="happy">😊</button>
+      <button class="mood-btn" data-mood="calm">🌿</button>
+      <button class="mood-btn" data-mood="romantic">💗</button>
+      <button class="mood-btn" data-mood="energetic">⚡</button>
+      <!-- ДОБАВЛЯЕМ ПЯТУЮ: -->
+      <button class="mood-btn" data-mood="dreamy">🌙</button>
+    </div>
+  </section>
+
+  <!-- Секция 3: Игра -->
+  <section class="card reveal glass">
+    <div class="decor-stars">✦ ✧ ✦</div>
+    <h2 class="section-title">Поймай цветы</h2>
+    <p class="text-small mb-20">Собирай цветы, избегай кактусов!</p>
+
+    <div class="game-wrapper">
+      <div class="game-hud">
+        <span id="gameScore">Счёт: 0</span>
+        <span id="gameTime">Время: 15с</span>
+      </div>
+      <div class="game-area" id="gameArea">
+        <div class="game-basket" id="gameBasket">🧺</div>
+        <div class="game-start-overlay" id="gameStartOverlay">
+          <button class="btn" id="gameStartBtn">Играть</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция 4: Салют -->
+  <section class="card reveal glass center">
+    <h2 class="section-title">Запусти салют</h2>
+    <p class="text-small mb-24">Нажми на кнопку!</p>
+    <button class="btn btn-large glow-btn" id="partyBtn">Запустить 🎇</button>
+  </section>
+
+  <!-- Секция 5: Видео (Ровная карусель) -->
+  <section class="card reveal glass">
+    <h2 class="section-title">Веселые видео</h2>
+    <div class="video-carousel-wrapper">
+      <button class="video-arrow prev" id="videoPrev">❮</button>
+      <div class="video-carousel" id="videoCarousel">
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="video/5.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="video/2.mp4" type="video/mp4">
+          </video>
+
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="video/1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="video/4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="video/3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button class="video-arrow next" id="videoNext">❯</button>
+    </div>
+  </section>
+
+  <footer>
+    <p class="text-small">Made with love <span class="heart">♡</span> 2026</p>
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
