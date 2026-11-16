@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
    ============================================================ */
 (function initBgPetals() {
   const container = document.getElementById('bgPetals');
-  const symbols = ['✦', '✧', '⋆', '♡', '✿', '❀']; 
+  const symbols = ['✦', '✧', '★', '☆', '❤', '✿', '❀']; 
   for (let i = 0; i < 25; i++) {
     const el = document.createElement('div');
     el.className = 'bg-petal';
